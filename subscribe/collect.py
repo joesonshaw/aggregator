@@ -391,8 +391,8 @@ def aggregate(args: argparse.Namespace) -> None:
                 with open(v, "r", encoding="utf8") as f:
                     files[k] = {"content": f.read(), "filename": k}
 
-        if urls:
-            files[subscribes_file] = {"content": "\n".join(urls), "filename": subscribes_file}
+        # if urls:
+        #     files[subscribes_file] = {"content": "\n".join(urls), "filename": subscribes_file}
 
         if files:
             push_client = push.PushToGist(token=access_token)
